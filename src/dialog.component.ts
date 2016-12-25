@@ -1,6 +1,6 @@
 import { OnInit, EventEmitter, OnDestroy, ElementRef } from '@angular/core';
 
-import { DialogArgs, CallbackOrPromise } from './';
+import { DialogArgs, CallbackOrPromise } from '../';
 
 export abstract class BaseDialogComponent<TArgument, TResult> implements OnInit, OnDestroy {
 

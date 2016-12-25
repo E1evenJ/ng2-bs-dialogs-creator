@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter, ComponentFactoryResolver } from '@angular/core';
 
-import { DialogArgs } from './';
+import { DialogArgs } from '../';
 
 @Injectable()
 export class DialogsService {
