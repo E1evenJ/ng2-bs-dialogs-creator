@@ -7,6 +7,9 @@ automatically appends the component to a specific dialog container. You have the
 the dialog container, so you can put it where ever you want. It is suggested to put it as close as you can to the
 `body` element.
 
+This library is in beta, so if you have any suggestions please contact us.
+Thanks!
+
 
 #How to use it
 

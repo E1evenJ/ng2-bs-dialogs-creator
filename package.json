@@ -1,7 +1,7 @@
 {
 	"name": "ng2-bs-dialogs-creator",
 	"author": "masdev",
-	"description": "Utilities to create arbitrary bootstrap dialogs using Angular 2",
+	"description": "Utilities to create Bootstrap modals using Angular 2",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/MasDevProject/ng2-bs-dialogs-creator.git"
