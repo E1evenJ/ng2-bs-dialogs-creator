@@ -17,7 +17,6 @@ export abstract class BaseDialogComponent<TArgument, TResult> implements OnInit,
 	public ngOnInit(): void {
 		setTimeout(() => {
 			this.dialogElement = jQuery(this.elementRef.nativeElement).find('#' + this.id);
-			// this.dialogElement.appendTo('body');
 
 			this.dialogElement.on('hidden.bs.modal', evt => {
 				if (this.closedByCode) {
@@ -28,7 +27,7 @@ export abstract class BaseDialogComponent<TArgument, TResult> implements OnInit,
 				}
 			});
 
-			this.dialogElement.modal();
+			(<any>this.dialogElement).modal();
 		});
 	}
 
@@ -44,7 +43,7 @@ export abstract class BaseDialogComponent<TArgument, TResult> implements OnInit,
 	public closeDialogWithResult(result: TResult) {
 		this.closedByCode = true;
 
-		this.dialogElement.modal('hide');
+		(<any>this.dialogElement).modal('hide');
 
 		if (this.callbackOrPromise.callback) {
 			this.callbackOrPromise.callback(result);
