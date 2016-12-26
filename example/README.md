@@ -1,4 +1,4 @@
-An example of usage of ng2-bs-dialogs-creator.
+This is an example of usage of ng2-bs-dialogs-creator.
 To run it go inside the main folder (`example`) with a terminal and use the following commands:
 ```
 npm install
