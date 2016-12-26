@@ -1,19 +1,20 @@
-#Intro
+# Intro
 
 `ng2-bs-dialogs-creator` is a utility that helps developers to show [Boostrap 3.* modals](http://getbootstrap.com/javascript/#modals) using [Angular2](https://angular.io).
 Bootstrap modals works better if you append them as close as you can to the `body` element.
-Given a `Component` `Type`, this library let you instantiate a dialog from code and it
-automatically appends the component to a specific dialog container. You have the control over
-the dialog container, so you can put it where ever you want. It is suggested to put it as close as you can to the
+Given a `Component` `Type`, this library let you instantiate a dialog from code (without declaring it in the template) and it
+automatically appends the component to a specific dialogs-container. You have the control over
+the dialogs-container, so you can put it where ever you want. It is suggested to put it as close as you can to the
 `body` element.
 
-This library is in beta, so if you have any suggestions please contact us.
+This library is in beta, so if you have any suggestion please contact us.
 Thanks!
 
+In the [repository](https://github.com/MasDevProject/ng2-bs-dialogs-creator.git) you can find a complete example with 2 dialogs.
 
-#How to use it
+# How to use it
 
-##Download
+## Download
 
 Use `npm` to download tha library.
 ```
@@ -21,7 +22,7 @@ npm install ng2-bs-dialogs
 ```
 
 
-##Import the module
+## Import the module
 
 Import the module into the `AppModule` as follows:
 
@@ -39,7 +40,7 @@ export class AppModule { }
 You have to import it just one time, if you try to import it in multiple modules, you will get an `Exception`.
 
 
-##Add the DialogsContainerComponent into the AppComponent template
+## Add the DialogsContainerComponent into the AppComponent template
 
 Next you should import the `DialogsContainerComponent` into a template.
 This Component will create dialogs and will append them inside its template.
@@ -56,7 +57,7 @@ selector as the last element in the `AppComponent` template.
 ```
 
 
-##Create a new dialog
+## Create a new dialog
 
 A dialog is a `Component`, so you can create it in the same way.
 The only difference is that you have to extend `BaseDialogComponent<TArgument, TResult>`.
@@ -65,7 +66,7 @@ This is an example:
 **src/home/my-dialog.component.ts**
 ```
 @Component({
-	templateUrl: 'my-dialog.component.html'
+	templateUrl: './my-dialog.component.html'
 })
 export class MyDialogComponent extends BaseDialogComponent<void, string> {
 	public constructor(elementRef: ElementRef) {
@@ -93,7 +94,7 @@ This is an example:
 ```
 
 
-##Declare the dialog
+## Declare the dialog
 
 Now you have to register it in the module that contains it.
 This library allows you to use whatever module you want (lazy, eager, ...) but you need to register
@@ -116,13 +117,13 @@ export class HomeModule { }
 ```
 
 
-##Open the dialog
+## Open the dialog
 
 Everything is setup, so you just need to open the dialog.
 To open it you need to use the DialogsService.
 DialogsService has just 2 methods: `open` and `openAsync`.
-The first accepts a callback as paramenters, the second returns a `Promise`.
-You can use it in the following way;
+The first accepts a callback as paramenter, the second returns a `Promise`.
+You can use them in the following way;
 
 
 **src/home/home.module.ts**
@@ -134,19 +135,19 @@ class MyComponent {
 
 	public openDialog():void {
 		this.d.show('my-dialog-id', MyDialogComponent, 'myArg', this.r, res => {
-			console.log(res)
+			console.log(res);
 		});
 	}
 
 	public openDialogAsync():void {
 		this.d.showAsync('my-dialog-id', MyDialogComponent, 'myArg', this.r)
 		.then(res => console.log(res)
-		.catch(() => console.log('Dialog closed by cloccking on the shadow or pressing the "esc" button'));
+		.catch(() => console.log('Dialog closed by clicking on the shadow or pressing the "esc" button'));
 	}
 }
 ```
 
-#Contributors
+# Contributors
 - Francesco Mazzarol
 - Gianluca Bonacin
 - Jonny Fox
