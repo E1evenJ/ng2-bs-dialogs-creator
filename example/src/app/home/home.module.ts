@@ -14,7 +14,6 @@ import { HomeComponent } from './home.component';
 			{ path: '', component: HomeComponent },
 		])
 	],
-	providers: [],
 	entryComponents: [
 		SecondDialogComponent
 	],
