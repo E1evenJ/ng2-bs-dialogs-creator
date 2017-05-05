@@ -151,3 +151,4 @@ class MyComponent {
 - Francesco Mazzarol
 - Gianluca Bonacin
 - Jonny Fox
+- Salvatore Di Stefano
