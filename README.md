@@ -18,7 +18,7 @@ In the [repository](https://github.com/MasDevProject/ng2-bs-dialogs-creator.git)
 
 Use `npm` to download tha library.
 ```
-npm install ng2-bs-dialogs
+npm install ng2-bs-dialogs-creator
 ```
 
 
