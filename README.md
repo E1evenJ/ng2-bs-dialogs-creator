@@ -68,20 +68,23 @@ This is an example:
 @Component({
 	templateUrl: './my-dialog.component.html'
 })
-export class MyDialogComponent extends BaseDialogComponent<void, string> {
+export class MyDialogComponent extends BaseDialogComponent<void, string> implements OnInit {
 	public constructor(elementRef: ElementRef) {
 		super(elementRef);
 	}
-	public done() { 
+	public done(): void { 
 		this.closeDialogWithResult('myResult');
+	}
+	public ngOnInit(): void {
+		super.ngOnInit();
 	}
 }
 ```
 
 We are talking about Boostrap modals so the template has to follow the Bootstrap modal guide lines, but you can customize it as you like.
 This is an example:
-```
 **src/home/my-dialog.component.ts**
+```
 <div class="modal fade" id="{{id}}" tabindex="-1" role="dialog">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
