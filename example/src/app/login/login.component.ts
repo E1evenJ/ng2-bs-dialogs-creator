@@ -22,7 +22,7 @@ export class LoginComponent {
 	constructor(private dialogsSvc: DialogsService, private componentFactoryResolver: ComponentFactoryResolver, private router: Router) { }
 
 	openDialog(): void {
-		this.dialogsSvc.showAsync('fd', FirstDialogComponent, this.title, this.componentFactoryResolver)
+		this.dialogsSvc.showAsync('fd', FirstDialogComponent, this.componentFactoryResolver, this.title)
 			.then(res => alert('The result is: ' + res))
 			.catch(res => alert('Dialog close from user'));
 	}

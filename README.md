@@ -1,14 +1,12 @@
 # Intro
 
-`ng2-bs-dialogs-creator` is a utility that helps developers to show [Boostrap 3.* modals](http://getbootstrap.com/javascript/#modals) using [Angular2](https://angular.io).
+`ng2-bs-dialogs-creator` is a utility that helps developers to show [Boostrap 3.*/4.* modals](http://getbootstrap.com/javascript/#modals) using [Angular2](https://angular.io).
 Bootstrap modals works better if you append them as close as you can to the `body` element.
-Given a `Component` `Type`, this library let you instantiate a dialog from code (without declaring it in the template) and it
-automatically appends the component to a specific dialogs-container. You have the control over
-the dialogs-container, so you can put it where ever you want. It is suggested to put it as close as you can to the
+Given a `Component` `Type`, this library let you instantiate a dialog from code (without declaring it in the template) and it automatically appends the component to a specific dialogs-container. You have the control over
+the dialogs-container, so you can put it where ever you want. As said, it is suggested to put it as close as you can to the
 `body` element.
 
-This library is in beta, so if you have any suggestion please contact us.
-Thanks!
+If you have any suggestion please contact us. Thanks!
 
 In the [repository](https://github.com/MasDevProject/ng2-bs-dialogs-creator.git) you can find a complete example with 2 dialogs.
 
@@ -137,13 +135,13 @@ class MyComponent {
 	constructor(private d: DialogsService, private r: ComponentFactoryResolver) { }
 
 	public openDialog():void {
-		this.d.show('my-dialog-id', MyDialogComponent, 'myArg', this.r, res => {
+		this.d.show('my-dialog-id', MyDialogComponent, this.r, 'myArg', res => {
 			console.log(res);
 		});
 	}
 
 	public openDialogAsync():void {
-		this.d.showAsync('my-dialog-id', MyDialogComponent, 'myArg', this.r)
+		this.d.showAsync('my-dialog-id', MyDialogComponent, this.r, 'myArg')
 		.then(res => console.log(res)
 		.catch(() => console.log('Dialog closed by clicking on the shadow or pressing the "esc" button'));
 	}

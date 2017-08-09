@@ -12,9 +12,9 @@ export class DialogsService {
 	public show(
 		id: string,
 		type: any,
-		args: any,
 		componentFactoryResolver: ComponentFactoryResolver,
-		cb: (res) => void,
+		args: any = null,
+		cb: (res) => void = null,
 		clearPreviousDialog = true): void {
 
 		this.openDialogEvt.emit({
@@ -34,8 +34,8 @@ export class DialogsService {
 	public showAsync<TResult>(
 		id: string,
 		type: any,
-		args: any,
 		componentFactoryResolver: ComponentFactoryResolver,
+		args: any = null,
 		clearPreviousDialog = true): Promise<TResult> {
 
 		return new Promise((resolve, reject) => {

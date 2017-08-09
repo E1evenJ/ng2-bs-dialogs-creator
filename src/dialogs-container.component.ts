@@ -31,8 +31,8 @@ export class DialogsContainerComponent implements OnInit, OnDestroy {
 			this.dialogAnchor.clear();
 		}
 
-		let dialogComponentFactory = dialogArgs.componentFactoryResolver.resolveComponentFactory(dialogArgs.type);
-		let dialogComponentRef = this.dialogAnchor.createComponent(dialogComponentFactory);
+		const dialogComponentFactory = dialogArgs.componentFactoryResolver.resolveComponentFactory(dialogArgs.type);
+		const dialogComponentRef = this.dialogAnchor.createComponent(dialogComponentFactory);
 
 		(<any>dialogComponentRef.instance).openDialog(dialogArgs);
 		(<any>dialogComponentRef.instance).closeEvent.subscribe(() => dialogComponentRef.destroy());
