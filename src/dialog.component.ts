@@ -15,6 +15,7 @@ export abstract class BaseDialogComponent<TArgument, TResult> implements OnInit,
 	public constructor(protected elementRef: ElementRef) { }
 
 	public ngOnInit(): void {
+		this.onDialogInit();
 		setTimeout(() => {
 			this.dialogElement = jQuery(this.elementRef.nativeElement).find('#' + this.id);
 
@@ -27,9 +28,17 @@ export abstract class BaseDialogComponent<TArgument, TResult> implements OnInit,
 				}
 			});
 
+			this.dialogElement.on('shown.bs.modal', evt => {
+				this.onDialogViewReady();
+			});
+
 			(<any>this.dialogElement).modal();
 		});
 	}
+
+	public abstract onDialogInit(): void;
+
+	public abstract onDialogViewReady(): void;
 
 	public ngOnDestroy(): void {
 	}

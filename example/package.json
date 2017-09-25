@@ -23,7 +23,7 @@
     "zone.js": "0.8.10",
     "bootstrap":"3.3.7",
     "jquery":"3.2.1",
-    "ng2-bs-dialogs-creator": "4.3.4"
+    "ng2-bs-dialogs-creator": "4.4.4"
   },
   "devDependencies": {
     "@angular/compiler-cli": "4.1.1",

@@ -66,16 +66,22 @@ This is an example:
 @Component({
 	templateUrl: './my-dialog.component.html'
 })
-export class MyDialogComponent extends BaseDialogComponent<void, string> implements OnInit {
+export class MyDialogComponent extends BaseDialogComponent<void, string> {
 	public constructor(elementRef: ElementRef) {
 		super(elementRef);
+	}
+	public onDialogInit(): void {	
+	}
+	public onDialogViewReady(): void {
 	}
 	public done(): void { 
 		this.closeDialogWithResult('myResult');
 	}
-	public ngOnInit(): void {
-		super.ngOnInit();
-	}
+
+	// Use onDialogInit() instead of ngOnInit() inside a dialog. If you want to use it anyway, remember to call super.ngOnInit();
+	// public ngOnInit(): void {
+	//	 super.ngOnInit();
+	// }
 }
 ```
 
