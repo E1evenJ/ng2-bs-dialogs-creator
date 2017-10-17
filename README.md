@@ -1,6 +1,6 @@
 # Intro
 
-`ng2-bs-dialogs-creator` is a utility that helps developers to show [Boostrap 3.*/4.* modals](http://getbootstrap.com/javascript/#modals) using [Angular2](https://angular.io).
+`ng2-bs-dialogs-creator` is a utility that helps developers to show [Boostrap 3.*/4.* modals](http://getbootstrap.com/javascript/#modals) using [Angular](https://angular.io).
 Bootstrap modals works better if you append them as close as you can to the `body` element.
 Given a `Component` `Type`, this library let you instantiate a dialog from code (without declaring it in the template) and it automatically appends the component to a specific dialogs-container. You have the control over
 the dialogs-container, so you can put it where ever you want. As said, it is suggested to put it as close as you can to the
@@ -14,7 +14,7 @@ In the [repository](https://github.com/MasDevProject/ng2-bs-dialogs-creator.git)
 
 ## Download
 
-Use `npm` to download tha library.
+Use `npm` to download the library.
 ```
 npm install ng2-bs-dialogs-creator
 ```
@@ -105,7 +105,7 @@ This is an example:
 
 Now you have to register it in the module that contains it.
 This library allows you to use whatever module you want (lazy, eager, ...) but you need to register
-the dialog is the `declarations` AND in the `entryComponents`.
+the dialog in the `declarations` **and** in the `entryComponents`.
 This is an example:
 
 **src/home/home.module.ts**
@@ -130,7 +130,7 @@ Everything is setup, so you just need to open the dialog.
 To open it you need to use the DialogsService.
 DialogsService has just 2 methods: `open` and `openAsync`.
 The first accepts a callback as paramenter, the second returns a `Promise`.
-You can use them in the following way;
+You can use them in the following way:
 
 
 **src/home/home.module.ts**
