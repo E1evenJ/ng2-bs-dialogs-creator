@@ -1,5 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
-import { BaseDialogComponent } from 'ng2-bs-dialogs-creator';
+
+import { BaseDialogComponent } from '../../../modal';
 
 @Component({
 	templateUrl: './first-dialog.component.html'

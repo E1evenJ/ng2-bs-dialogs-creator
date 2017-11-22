@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { DialogsModule } from 'ng2-bs-dialogs-creator';
 
+import { DialogsModule } from '../modal';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
 		RouterModule.forRoot([
 			{ path: '', redirectTo: 'login', pathMatch: 'full' },
 			{ path: 'login', loadChildren: 'app/login/login.module#LoginModule' },
-			{ path: 'home', loadChildren: 'app/home/home.module#HomeModule' },
+			{ path: 'home', loadChildren: 'app/home/home.module#HomeModule' }
 		])
 	],
 	bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, ComponentFactoryResolver } from '@angular/core';
-import { DialogsService } from 'ng2-bs-dialogs-creator';
+
+import { DialogsService } from '../modal';
 
 @Component({
 	selector: 'app-root',

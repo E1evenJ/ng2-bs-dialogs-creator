@@ -6,19 +6,40 @@
 		"type": "git",
 		"url": "git+https://github.com/MasDevProject/ng2-bs-dialogs-creator.git"
 	},
-	"version": "4.4.4",
+	"scripts": {
+		"ng": "ng",
+		"start": "ng serve",
+		"packagr": "ng-packagr -p ng-package.json"
+	},
+	"private": false,
+	"version": "5.0.2",
 	"license": "Apache2.0",
 	"engines": {
 		"node": ">= 5.4.1 < 7"
 	},
 	"dependencies": {
-		"@angular/core": "^4.3.3",
-		"core-js": "^2.4.1",
-		"rxjs": "^5.4.2",
-		"zone.js": "^0.8.11"
+		"@angular/common": "5.0.2",
+		"@angular/compiler": "5.0.2",
+		"@angular/core": "5.0.2",
+		"@angular/forms": "5.0.2",
+		"@angular/http": "5.0.2",
+		"@angular/platform-browser": "5.0.2",
+		"@angular/platform-browser-dynamic": "5.0.2",
+		"@angular/router": "5.0.2",
+		"core-js": "2.4.1",
+		"rxjs": "5.5.2",
+		"ts-helpers": "1.1.2",
+		"zone.js": "0.8.14",
+		"bootstrap": "3.3.7",
+		"jquery": "3.2.1"
 	},
 	"devDependencies": {
-		"@types/jquery":"^2.0.46",
-		"typescript": "^2.3.4"
+		"@angular/cli": "1.5.3",
+		"@angular/compiler-cli": "5.0.2",
+		"@types/jquery": "2.0.43",
+		"@types/node": "7.0.18",
+		"ng-packagr": "^1.6.0",
+		"ts-node": "1.2.1",
+		"typescript": "2.4.2"
 	}
 }

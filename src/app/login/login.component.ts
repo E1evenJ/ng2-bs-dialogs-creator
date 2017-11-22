@@ -1,7 +1,7 @@
 import { Component, ComponentFactoryResolver } from '@angular/core';
-import { DialogsService } from 'ng2-bs-dialogs-creator';
 import { Router } from '@angular/router';
 
+import { DialogsService } from '../../modal';
 import { FirstDialogComponent } from './first-dialog.component/first-dialog.component';
 
 @Component({
