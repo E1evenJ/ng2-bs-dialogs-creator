@@ -3,8 +3,7 @@
 `ng2-bs-dialogs-creator` is a utility that helps developers to show [Boostrap 3.*/4.* modals](http://getbootstrap.com/javascript/#modals) using [Angular](https://angular.io).
 Bootstrap modals works better if you append them as close as you can to the `body` element.
 Given a `Component` `Type`, this library let you instantiate a dialog from code (without declaring it in the template) and it automatically appends the component to a specific dialogs-container. You have the control over
-the dialogs-container, so you can put it where ever you want. As said, it is suggested to put it as close as you can to the
-`body` element.
+the dialogs-container, so you can put it where ever you want. As said, it is suggested to put it as close as you can to the `body` element.
 
 If you have any suggestion please contact us. Thanks!
 

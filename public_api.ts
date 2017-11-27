@@ -1,1 +1,1 @@
-export * from './src/modal/dialogs.module';
+export * from './src/modal';
